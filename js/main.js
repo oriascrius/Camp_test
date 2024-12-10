@@ -361,3 +361,29 @@ function createRipple(event) {
 document.querySelectorAll(".card").forEach((card) => {
   card.addEventListener("click", createRipple);
 });
+
+// 汉堡菜单交互
+document.addEventListener('DOMContentLoaded', function() {
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+
+  // 点击汉堡按钮外区域关闭菜单
+  document.addEventListener('click', function(event) {
+    const isClickInside = navbarToggler.contains(event.target) || 
+                         navbarCollapse.contains(event.target);
+    
+    if (!isClickInside && navbarCollapse.classList.contains('show')) {
+      navbarToggler.click();
+    }
+  });
+
+  // 点击导航链接后自动关闭菜单
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navbarCollapse.classList.contains('show')) {
+        navbarToggler.click();
+      }
+    });
+  });
+});
