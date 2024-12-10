@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>星空露營平台</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- 自定義CSS -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 如果需要斜體版本 -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <!-- 頂部資訊列 -->
+      <div class="header-top">
+        <div class="container">
+          <div class="top-info">
+            <a href="tel:0800-000-000" class="info-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>24小時服務專線：0800-000-000</span>
+            </a>
+            <a href="mailto:service@camping.com" class="info-item">
+              <i class="fas fa-envelope"></i>
+              <span>service@camping.com</span>
+            </a>
+          </div>
+          <div class="top-social">
+            <a href="#" title="Line"><i class="fab fa-line"></i></a>
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 主導航欄 -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="星空露營" class="logo-img" />
+          </a>
+
+          <div class="navbar-collapse" id="navbarNav">
+            <!-- 主要導航選項 -->
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fas fa-map-marked-alt"></i>
+                  <span>營地探索</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fas fa-fire"></i>
+                  <span>熱門活動</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fas fa-store"></i>
+                  <span>裝備商城</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fas fa-book"></i>
+                  <span>露營攻略</span>
+                </a>
+              </li>
+            </ul>
+
+            <!-- 右側功能區 -->
+            <div class="navbar-nav action-nav">
+              <!-- 搜索框 -->
+              <div class="search-box">
+                <input class="ms-2" type="text" placeholder="搜尋營地..." />
+                <i class="ps-2 fas fa-search search-icon"></i>
+              </div>
+              
+              <!-- 功能按鈕 -->
+              <a href="#" class="action-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="action-count">0</span>
+              </a>
+              <a href="#" class="action-btn">
+                <i class="fas fa-heart"></i>
+                <span class="action-count">0</span>
+              </a>
+              <a href="#" class="login-btn">
+                <i class="fas fa-user"></i>
+                <span>登入</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 主要內容區域 -->
+    <main>
+      <!-- Hero Banner Section -->
+      <section class="hero-banner">
+        <div class="banner-slider">
+          <!-- 第一張輪播 -->
+          <div class="banner-item">
+            <div
+              class="banner-background"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80');
+              "
+            ></div>
+            <div class="container">
+              <div class="banner-content">
+                <h1 class="banner-title" data-aos="fade-up">
+                  星空下的露營體驗
+                </h1>
+                <p
+                  class="banner-subtitle"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  遠離城市喧囂，擁抱大自然的寧靜
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary btn-lg banner-btn"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <i class="fas fa-campground me-2"></i>立即預訂
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第二張輪播 -->
+          <div class="banner-item">
+            <div
+              class="banner-background"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1510312305653-8ed496efae75?q=80');
+              "
+            ></div>
+            <div class="container">
+              <div class="banner-content">
+                <h1 class="banner-title" data-aos="fade-up">
+                  專業露營裝備租借
+                </h1>
+                <p
+                  class="banner-subtitle"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  全新精品裝備，讓您露營無負擔
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary btn-lg banner-btn"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <i class="fas fa-shopping-cart me-2"></i>查看裝備
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第三張輪播 -->
+          <div class="banner-item">
+            <div
+              class="banner-background"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1496545672447-f699b503d270?q=80');
+              "
+            ></div>
+            <div class="container">
+              <div class="banner-content">
+                <h1 class="banner-title" data-aos="fade-up">親子同樂露營趣</h1>
+                <p
+                  class="banner-subtitle"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  專業教練帶領，安全舒適的露營體驗
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary btn-lg banner-btn"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <i class="fas fa-users me-2"></i>活動報名
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 輪播控按鈕 -->
+        <div class="banner-controls">
+          <button class="prev" aria-label="上一張">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="next" aria-label="下一張">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- 輪播指示點 -->
+        <div class="banner-indicators">
+          <button class="indicator active" data-slide="0"></button>
+          <button class="indicator" data-slide="1"></button>
+          <button class="indicator" data-slide="2"></button>
+        </div>
+      </section>
+
+      <!-- 最新動資訊 Section -->
+      <section class="latest-events py-5" data-aos="fade-up">
+        <div class="container">
+          <div class="section-header mb-4">
+            <h2><i class="fas fa-calendar-alt me-2"></i>最新活動資訊</h2>
+            <p class="text-muted">探索精彩的露營活動與工作坊</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="event-card card animated">
+                <div class="event-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7"
+                    alt="星空觀測營"
+                  />
+                  <div class="event-date">
+                    <span class="day">25</span>
+                    <span class="month">MAR</span>
+                  </div>
+                </div>
+                <div class="event-content">
+                  <h3>星空觀測營</h3>
+                  <p class="event-info">
+                    <i class="fas fa-map-marker-alt me-2"></i>陽明山國家公園
+                    <i class="fas fa-users ms-3 me-2"></i>名額 20 人
+                  </p>
+                  <p class="event-description">
+                    專業天文導覽，觀測春季星空，體驗高山露營。
+                  </p>
+                  <a href="#" class="btn btn-outline-primary w-100">
+                    <i class="fas fa-ticket-alt me-2"></i>立即報名
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="event-card">
+                <div class="event-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d"
+                    alt="野炊料理工作坊"
+                  />
+                  <div class="event-date">
+                    <span class="day">30</span>
+                    <span class="month">MAR</span>
+                  </div>
+                </div>
+                <div class="event-content">
+                  <h3>野炊料理工作坊</h3>
+                  <p class="event-info">
+                    <i class="fas fa-map-marker-alt me-2"></i>新竹五峰
+                    <i class="fas fa-users ms-3 me-2"></i>名額 15 人
+                  </p>
+                  <p class="event-description">
+                    學習戶外料理技術，享受自然風味美食。
+                  </p>
+                  <a href="#" class="btn btn-outline-primary w-100">
+                    <i class="fas fa-ticket-alt me-2"></i>立即報名
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="event-card">
+                <div class="event-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1537905569824-f89f14cceb68"
+                    alt="親子露營體驗"
+                  />
+                  <div class="event-date">
+                    <span class="day">05</span>
+                    <span class="month">APR</span>
+                  </div>
+                </div>
+                <div class="event-content">
+                  <h3>親子露營體驗</h3>
+                  <p class="event-info">
+                    <i class="fas fa-map-marker-alt me-2"></i>宜蘭大同
+                    <i class="fas fa-users ms-3 me-2"></i>名額 10 組
+                  </p>
+                  <p class="event-description">
+                    適合親子同樂的露營活動，包含自然教育課程。
+                  </p>
+                  <a href="#" class="btn btn-outline-primary w-100">
+                    <i class="fas fa-ticket-alt me-2"></i>立即報名
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 簡約 Banner -->
+      <section class="simple-banner" style="background-image: url('https://images.unsplash.com/photo-1478827387698-1527781a4887?q=80');">
+        <div class="container">
+          <div class="banner-content" data-aos="fade-up">
+            <h3>專業露營裝備租借服務</h3>
+            <p>全新精品裝備，讓您露營無負擔</p>
+            <a href="#" class="btn btn-light mt-3">
+              <i class="fas fa-camping me-2"></i>查看更多
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 熱門商品 Section -->
+      <section class="popular-products py-5 bg-light" data-aos="fade-up">
+        <div class="container">
+          <div class="section-header mb-4">
+            <h2><i class="fas fa-fire me-2"></i>熱門商品</h2>
+            <p class="text-muted">精選露營裝備與用品推薦</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="product-card card">
+                <div class="product-badge">熱銷</div>
+                <img
+                  src="https://images.unsplash.com/photo-1445308394109-4ec2920981b1?auto=format&fit=crop&q=80"
+                  alt="四季型睡袋"
+                />
+                <div class="product-content">
+                  <h3>四季型睡袋</h3>
+                  <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(45)</span>
+                  </div>
+                  <p class="price">NT$ 2,580</p>
+                  <button class="btn btn-primary w-100">
+                    <i class="fas fa-shopping-cart me-2"></i>加入購物車
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+              <div class="product-card">
+                <div class="product-badge">新品</div>
+                <img
+                  src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80"
+                  alt="豪華摺疊椅"
+                />
+                <div class="product-content">
+                  <h3>豪華摺疊椅</h3>
+                  <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>(38)</span>
+                  </div>
+                  <p class="price">NT$ 1,280</p>
+                  <button class="btn btn-primary w-100">
+                    <i class="fas fa-shopping-cart me-2"></i>加入購物車
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+              <div class="product-card">
+                <div class="product-badge">限量</div>
+                <img
+                  src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&q=80"
+                  alt="LED營地燈"
+                />
+                <div class="product-content">
+                  <h3>LED營地燈</h3>
+                  <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>(52)</span>
+                  </div>
+                  <p class="price">NT$ 890</p>
+                  <button class="btn btn-primary w-100">
+                    <i class="fas fa-shopping-cart me-2"></i>加入購物車
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+              <div class="product-card">
+                <div class="product-badge">促銷</div>
+                <img
+                  src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?auto=format&fit=crop&q=80"
+                  alt="野營炊具組"
+                />
+                <div class="product-content">
+                  <h3>野營炊具組</h3>
+                  <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(29)</span>
+                  </div>
+                  <p class="price">NT$ 1,980</p>
+                  <button class="btn btn-primary w-100">
+                    <i class="fas fa-shopping-cart me-2"></i>加入購物車
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 簡約 Banner -->
+      <section class="simple-banner" style="background-image: url('https://images.unsplash.com/photo-1475483768296-6163e08872a1?q=80');">
+        <div class="container">
+          <div class="banner-content text-end" data-aos="fade-up">
+            <h3>打造完美露營體驗</h3>
+            <p>專業教練帶領，安全舒適的露營體驗</p>
+            <a href="#" class="btn btn-light mt-3">
+              <i class="fas fa-map-marked-alt me-2"></i>探索更多
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 地區分類 Section -->
+      <section class="region-categories py-5" data-aos="fade-up">
+        <div class="container">
+          <div class="section-header mb-4">
+            <h2><i class="fas fa-map me-2"></i>地區分類</h2>
+            <p class="text-muted">探索各區露營地</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+              <div
+                class="region-card card animated"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+                "
+              >
+                <div class="region-overlay">
+                  <h3>北部地區</h3>
+                  <p>25 個營地</p>
+                  <a href="#" class="btn btn-light">
+                    <i class="fas fa-arrow-right me-2"></i>查看更多
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+              <div
+                class="region-card"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80');
+                "
+              >
+                <div class="region-overlay">
+                  <h3>中部地區</h3>
+                  <p>18 個營地</p>
+                  <a href="#" class="btn btn-light">
+                    <i class="fas fa-arrow-right me-2"></i>查看更多
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+              <div
+                class="region-card"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80');
+                "
+              >
+                <div class="region-overlay">
+                  <h3>南部地區</h3>
+                  <p>22 個營地</p>
+                  <a href="#" class="btn btn-light">
+                    <i class="fas fa-arrow-right me-2"></i>查看更多
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+              <div
+                class="region-card"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80');
+                "
+              >
+                <div class="region-overlay">
+                  <h3>東部地區</h3>
+                  <p>15 個營地</p>
+                  <a href="#" class="btn btn-light">
+                    <i class="fas fa-arrow-right me-2"></i>查看更多
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 熱門露營地點 Section -->
+      <section class="popular-spots py-5 bg-light" data-aos="fade-up">
+        <div class="container">
+          <div class="section-header mb-4">
+            <h2><i class="fas fa-campground me-2"></i>熱門露營地點</h2>
+            <p class="text-muted">精選最受歡迎的露營勝地</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="spot-card card">
+                <div class="spot-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4"
+                    alt="山湖營地"
+                  />
+                  <div class="spot-badge">TOP 1</div>
+                </div>
+                <div class="spot-content">
+                  <h3>山湖營地</h3>
+                  <div class="spot-info">
+                    <span
+                      ><i class="fas fa-map-marker-alt me-2"></i>新北市</span
+                    >
+                    <span><i class="fas fa-mountain me-2"></i>海拔 1200m</span>
+                    <span
+                      ><i class="fas fa-temperature-high me-2"></i>15-25°C</span
+                    >
+                  </div>
+                  <p class="spot-description">
+                    坐擁山景與湖景，提供完善的露營設施與餐飲服務。
+                  </p>
+                  <div class="spot-footer">
+                    <div class="rating"><i class="fas fa-star"></i> 4.8</div>
+                    <a href="#" class="btn btn-primary">
+                      <i class="fas fa-bookmark me-2"></i>立即預訂
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="spot-card">
+                <div class="spot-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1517823382935-51bfcb0ec6bc"
+                    alt="森林營地"
+                  />
+                  <div class="spot-badge">TOP 2</div>
+                </div>
+                <div class="spot-content">
+                  <h3>森林營地</h3>
+                  <div class="spot-info">
+                    <span
+                      ><i class="fas fa-map-marker-alt me-2"></i>南投縣</span
+                    >
+                    <span><i class="fas fa-mountain me-2"></i>海拔 800m</span>
+                    <span
+                      ><i class="fas fa-temperature-high me-2"></i>18-28°C</span
+                    >
+                  </div>
+                  <p class="spot-description">
+                    被原始森林環，享受清新空氣與蟲鳴鳥叫。
+                  </p>
+                  <div class="spot-footer">
+                    <div class="rating"><i class="fas fa-star"></i> 4.7</div>
+                    <a href="#" class="btn btn-primary">
+                      <i class="fas fa-bookmark me-2"></i>立即預訂
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="spot-card">
+                <div class="spot-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1510312305653-8ed496efae75"
+                    alt="海景營地"
+                  />
+                  <div class="spot-badge">TOP 3</div>
+                </div>
+                <div class="spot-content">
+                  <h3>海景營地</h3>
+                  <div class="spot-info">
+                    <span
+                      ><i class="fas fa-map-marker-alt me-2"></i>屏東縣</span
+                    >
+                    <span><i class="fas fa-water me-2"></i>海拔 5m</span>
+                    <span
+                      ><i class="fas fa-temperature-high me-2"></i>22-30°C</span
+                    >
+                  </div>
+                  <p class="spot-description">
+                    臨海而建，欣賞日出日落，聆聽海浪聲。
+                  </p>
+                  <div class="spot-footer">
+                    <div class="rating"><i class="fas fa-star"></i> 4.6</div>
+                    <a href="#" class="btn btn-primary">
+                      <i class="fas fa-bookmark me-2"></i>立即預訂
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="spot-card">
+                <div class="spot-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7"
+                    alt="高原營地"
+                  />
+                  <div class="spot-badge">TOP 4</div>
+                </div>
+                <div class="spot-content">
+                  <h3>高原營地</h3>
+                  <div class="spot-info">
+                    <span
+                      ><i class="fas fa-map-marker-alt me-2"></i>宜蘭縣</span
+                    >
+                    <span><i class="fas fa-mountain me-2"></i>海拔 1500m</span>
+                    <span
+                      ><i class="fas fa-temperature-high me-2"></i>12-22°C</span
+                    >
+                  </div>
+                  <p class="spot-description">
+                    雲霧繞的高原營地，遠離塵囂的寧靜天地。
+                  </p>
+                  <div class="spot-footer">
+                    <div class="rating"><i class="fas fa-star"></i> 4.5</div>
+                    <a href="#" class="btn btn-primary">
+                      <i class="fas fa-bookmark me-2"></i>立即預訂
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section py-5">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <h2 class="section-title"><i class="fas fa-question-circle me-2"></i>常見問題</h2>
+            <p class="section-subtitle">CAMPING FAQ</p>
+          </div>
+          
+          <div class="faq-container">
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <h3><i class="fas fa-book-open me-2"></i>如何預訂營地？</h3>
+                <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>您可以透過網站或APP直接預訂，選擇想要的日期和營地，依照系統指示完成預訂流程即可。我們會在24小時內確認您的預訂並發送確認信。</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <h3><i class="fas fa-campground me-2"></i>可以租借露營裝備嗎？</h3>
+                <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>是的，我們提供完整的露營裝備租借服務，包括帳篷、睡袋、營燈、桌椅、炊具等。建議提前3天預訂裝備，以確保供應充足。</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <h3><i class="fas fa-calendar-times me-2"></i>如何取消預訂？</h3>
+                <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>您可以在會員中心看訂單，依照取消策略進行取消。一般情況下，預定日3天前取消可全額退費，3天內取消將收取30%手續費。</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <h3><i class="fas fa-shower me-2"></i>營地有提供盥洗設施嗎？</h3>
+                <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>是的，我們的營地都配備完善的盥洗設施，包括淋浴間、洗手間、洗衣設備等。部分營地還提供熱水供應及沐浴用品。</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <h3><i class="fas fa-cloud-rain me-2"></i>遇到天候不佳怎麼辦？</h3>
+                <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>若遇到颱風等重大天候因素，我們會提前通知並協助您更改日期或辦理退費。建議您可以關注我們的天氣預報訊，做好準備。</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <h3><i class="fas fa-shuttle-van me-2"></i>有提供接駁服務嗎？</h3>
+                <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>部分營地有提供接駁服務，請在預訂時查看營地詳情或直接聯繫客服詢問。接駁服務需要提前預約，並可能收取額外費用。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 熱門營地推薦 Section -->
+      <section class="popular-camps py-5" data-aos="fade-up">
+        <div class="container">
+          <div class="section-header mb-4">
+            <h2><i class="fas fa-fire me-2"></i>熱門營地推薦</h2>
+            <p class="text-muted">精選最受歡迎的露營勝地</p>
+          </div>
+          
+          <div class="row g-4">
+            <!-- 營地卡片 1 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="camp-card card">
+                <div class="camp-image">
+                  <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7" alt="山頂營地"/>
+                  <div class="camp-badge">
+                    <span class="hot">熱門</span>
+                  </div>
+                </div>
+                <div class="camp-content">
+                  <h3>山頂星空營地</h3>
+                  <div class="camp-info">
+                    <span><i class="fas fa-map-marker-alt me-2"></i>南投縣</span>
+                    <span><i class="fas fa-mountain ms-3 me-2"></i>海拔 1200m</span>
+                  </div>
+                  <p class="camp-description">位於高山,可遠眺城市夜景,適合觀星。提供完善的露營設施與觀星導覽服務。</p>
+                  <div class="camp-meta">
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <span>4.8 (126則評價)</span>
+                    </div>
+                    <div class="price">
+                      <span>NT$ 2,800</span>
+                      <small>/晚</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 營地卡片 2 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="camp-card card">
+                <div class="camp-image">
+                  <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4" alt="森林營地"/>
+                  <div class="camp-badge">
+                    <span class="hot">新開幕</span>
+                  </div>
+                </div>
+                <div class="camp-content">
+                  <h3>森林綠意營地</h3>
+                  <div class="camp-info">
+                    <span><i class="fas fa-map-marker-alt me-2"></i>宜蘭縣</span>
+                    <span><i class="fas fa-mountain ms-3 me-2"></i>海拔 800m</span>
+                  </div>
+                  <p class="camp-description">被原始森林環繞,享受清新空氣與蟲鳴鳥叫。提供森林浴與生態導覽活動。</p>
+                  <div class="camp-meta">
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <span>4.7 (98則評價)</span>
+                    </div>
+                    <div class="price">
+                      <span>NT$ 2,400</span>
+                      <small>/晚</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 營地卡片 3 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="camp-card card">
+                <div class="camp-image">
+                  <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75" alt="海景營地"/>
+                  <div class="camp-badge">
+                    <span class="hot">推薦</span>
+                  </div>
+                </div>
+                <div class="camp-content">
+                  <h3>濱海度假營地</h3>
+                  <div class="camp-info">
+                    <span><i class="fas fa-map-marker-alt me-2"></i>屏東縣</span>
+                    <span><i class="fas fa-water ms-3 me-2"></i>臨海</span>
+                  </div>
+                  <p class="camp-description">臨海而建,欣賞日出日落,提供水上活動與海鮮BBQ。適合親子同樂。</p>
+                  <div class="camp-meta">
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <span>4.6 (156則評價)</span>
+                    </div>
+                    <div class="price">
+                      <span>NT$ 3,200</span>
+                      <small>/晚</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 露營攻略 Section -->
+      <section class="camping-tips bg-light py-5">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <h2><i class="fas fa-book-reader me-2"></i>新手露營攻略</h2>
+            <p class="text-muted">帶你認識露營的第一步</p>
+          </div>
+          
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fas fa-campground"></i>
+                </div>
+                <h4>帳篷選擇</h4>
+                <p>了解不同類型帳篷的特點與適用場合</p>
+                <a href="#" class="btn btn-outline-primary">查看詳情</a>
+              </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fas fa-fire"></i>
+                </div>
+                <h4>野炊技巧</h4>
+                <p>戶外料理必備知識與實用技巧分享</p>
+                <a href="#" class="btn btn-outline-primary">查看詳情</a>
+              </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fas fa-first-aid"></i>
+                </div>
+                <h4>安全須知</h4>
+                <p>露營安全注意事項與緊急處理方法</p>
+                <a href="#" class="btn btn-outline-primary">查看詳情</a>
+              </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fas fa-list-check"></i>
+                </div>
+                <h4>裝備清單</h4>
+                <p>新手必備露營裝備清單與選購建議</p>
+                <a href="#" class="btn btn-outline-primary">查看詳情</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 客戶評價 Section -->
+      <section class="testimonials py-5">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <h2><i class="fas fa-quote-left me-2"></i>露友分享</h2>
+            <p class="text-muted">聽聽他們的露營體驗</p>
+          </div>
+          
+          <div class="testimonial-slider" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-item">
+              <div class="testimonial-content">
+                <div class="testimonial-text">
+                  <p>"第一次露營就愛上了！服務很貼心，設備也很新穎，營地環境維護得相當好，晚上可以看到滿天星斗，真的很推薦！"</p>
+                </div>
+                <div class="testimonial-author">
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="王小明" />
+                  <div class="author-info">
+                    <h5>王小明</h5>
+                    <span>台北市</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-item">
+              <div class="testimonial-content">
+                <div class="testimonial-text">
+                  <p>"帶著孩子來露營，營地提供的親子活動很豐富，工作人員也很有耐心，讓小孩玩得很開心，我們也學到很多露營知識。"</p>
+                </div>
+                <div class="testimonial-author">
+                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="林美玲" />
+                  <div class="author-info">
+                    <h5>林美玲</h5>
+                    <span>新竹市</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-item">
+              <div class="testimonial-content">
+                <div class="testimonial-text">
+                  <p>"營地位置很棒，視野開闊，設施完善，最讚的是晚上有專業天文導覽，第一次看到這麼多星星，很難忘的體驗！"</p>
+                </div>
+                <div class="testimonial-author">
+                  <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="張建國" />
+                  <div class="author-info">
+                    <h5>張建國</h5>
+                    <span>台中市</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 露營資訊 Section -->
+      <section class="camping-info bg-light py-5">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-right">
+              <div class="info-card">
+                <h3><i class="fas fa-newspaper me-2"></i>最新露營資訊</h3>
+                <ul class="list-unstyled">
+                  <li>
+                    <span class="date">2024/03/20</span>
+                    <a href="#">春季露營季開跑！各地營地優惠資訊</a>
+                  </li>
+                  <li>
+                    <span class="date">2024/03/18</span>
+                    <a href="#">2024年度最佳露營地點評選結果出爐</a>
+                  </li>
+                  <li>
+                    <span class="date">2024/03/15</span>
+                    <a href="#">露營新手必讀：春季露營注意事項</a>
+                  </li>
+                  <li>
+                    <span class="date">2024/03/12</span>
+                    <a href="#">全台熱門營地最新設施更新報導</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="col-md-6" data-aos="fade-left">
+              <div class="info-card">
+                <h3><i class="fas fa-calendar-alt me-2"></i>近期活動</h3>
+                <ul class="list-unstyled">
+                  <li>
+                    <span class="date">2024/04/15</span>
+                    <a href="#">親子露營體驗營</a>
+                  </li>
+                  <li>
+                    <span class="date">2024/04/22</span>
+                    <a href="#">星空觀測露營之夜</a>
+                  </li>
+                  <li>
+                    <span class="date">2024/05/01</span>
+                    <a href="#">五一勞動節特別企劃：野炊美食節</a>
+                  </li>
+                  <li>
+                    <span class="date">2024/05/15</span>
+                    <a href="#">春季露營裝備展示會</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- 回到頂部按鈕 -->
+    <button id="backToTop" class="back-to-top" aria-label="回到頂部">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 footer-section">
+            <h5 class="footer-title">關於我們</h5>
+            <p class="footer-text">
+              星空露營平台致力於提供最優質的露營體驗，讓每個人都能享受大自然的美好。我們提供全台各地精選營地預訂服務。
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link" title="Line"><i class="fab fa-line"></i></a>
+              <a href="#" class="social-link" title="Youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 footer-section">
+            <h5 class="footer-title">快速連結</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="#" class="footer-link">
+                  <i class="fas fa-angle-right"></i>常見問題
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">
+                  <i class="fas fa-angle-right"></i>營地守則
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">
+                  <i class="fas fa-angle-right"></i>隱私政策
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">
+                  <i class="fas fa-angle-right"></i>聯絡我們
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 footer-section">
+            <h5 class="footer-title">訂閱電子報</h5>
+            <p class="footer-text">
+              訂閱我們的電子報，獲得最新營地資訊和獨家優惠！
+            </p>
+            <div class="newsletter-form">
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control newsletter-input"
+                  placeholder="請輸入您的 Email"
+                />
+                <button class="btn btn-primary newsletter-btn" type="button">
+                  <i class="fas fa-paper-plane me-2"></i>訂閱
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p class="mb-0">
+            <i class="far fa-copyright me-2"></i>2024 星空露營平台 版權所有
+            <span class="mx-3">|</span>
+            <i class="fas fa-phone me-2"></i>客服專線：0800-000-000
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS 動畫效果 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 自定義 JS -->
+    <script src="js/main.js"></script>
+    <script>
+      // 初始化 AOS
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+  </body>
+</html>
