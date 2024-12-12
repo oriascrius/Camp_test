@@ -1,375 +1,766 @@
-/* 主要容器樣式 */
 .camping-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 20px;
 }
 
-/* 頂部橫幅 */
-.camping-banner {
+/* Banner 樣式 */
+.banner {
     position: relative;
-    height: 400px;
-    background-image: url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4');
-    background-size: cover;
-    background-position: center;
-    border-radius: var(--border-radius-lg);
-    margin-bottom: 3rem;
+    height: 500px;
     overflow: hidden;
 }
 
-.banner-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
-    display: flex;
-    align-items: center;
-    padding: 3rem;
-}
-
-.banner-content {
-    color: white;
-    max-width: 600px;
-}
-
-.banner-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.banner-content p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-/* 篩選區域樣式 */
-.filter-section {
-    background: var(--white);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.filter-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.filter-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.filter-group label {
-    font-weight: 500;
-    color: var(--gray-3);
-}
-
-.filter-group select,
-.filter-group input {
-    padding: 0.8rem;
-    border: 1px solid var(--gray-6);
-    border-radius: var(--border-radius-md);
-    background-color: var(--white);
-    transition: all 0.3s ease;
-}
-
-.filter-group select:focus,
-.filter-group input:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(105, 57, 23, 0.1);
-}
-
-/* 營區列表樣式 */
-.camping-spots {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-    margin: 0 auto;
-    max-width: 1400px;
-}
-
-.spot-card {
-    background: var(--white);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.spot-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-}
-
-.spot-image {
-    height: 200px;
-    overflow: hidden;
-}
-
-.spot-image img {
+.banner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s;
 }
 
-.spot-card:hover .spot-image img {
-    transform: scale(1.1);
+.banner:hover img {
+    transform: scale(1.05);
 }
 
-.spot-badge {
+.banner-title {
     position: absolute;
-    top: 1rem;
-    background: var(--primary-brown);
+    bottom: 60px;
+    left: 60px;
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    z-index: 1;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
-.spot-content {
-    padding: 1.2rem;
-    flex-grow: 1;
+/* 主要內容區塊布局 */
+.main-content {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    gap: 30px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.spot-header {
-    margin-bottom: 1rem;
+/* 左側篩選區優化 */
+.filter-sidebar {
+    width: 300px;
+    background: white;
+    padding: 24px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
 }
 
-.spot-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--gray-1);
-    margin-bottom: 0.5rem;
+/* 搜尋框樣式 */
+.search-input-group {
+    position: relative;
+    margin-bottom: 24px;
 }
 
-.spot-location {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.search-input-group i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--gray-4);
-    font-size: 0.9rem;
 }
 
-.spot-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin: 1rem 0;
+.search-input {
+    width: 100%;
+    padding: 12px 12px 12px 35px;
+    border: 1px solid var(--gray-6);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
 }
 
-.feature-item {
+/* 篩選區塊通用樣式 */
+.filter-section {
+    position: relative;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray-6);
+}
+
+.filter-section h3 {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    color: var(--gray-3);
-    font-size: 0.85rem;
+    gap: 8px;
+    color: var(--primary-brown);
+    margin-bottom: 16px;
+}
+
+.filter-section h3::before {
+    content: '';
+    width: 4px;
+    height: 16px;
+    background: var(--primary-brown);
+    border-radius: 2px;
+}
+
+/* 篩選選項容器 */
+.filter-options label {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-options label:hover {
+    background: rgba(105, 57, 23, 0.05);
+}
+
+/* 自定義 Checkbox */
+.custom-checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--gray-5);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.custom-checkbox:hover .checkmark {
+    border-color: var(--primary-brown);
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background: var(--primary-brown);
+    border-color: var(--primary-brown);
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    content: '✓';
+    color: white;
+    font-size: 14px;
+}
+
+/* 選項計數器 */
+.filter-count {
+    position: absolute;
+    right: 0;
+    top: 0;
     background: var(--gray-7);
-    padding: 0.4rem 0.8rem;
-    border-radius: 15px;
-}
-
-.spot-price {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--primary);
-}
-
-.spot-price span {
-    font-size: 0.9rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
     color: var(--gray-4);
-    font-weight: normal;
 }
 
-.spot-rating {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-}
-
-.spot-rating i {
-    color: #FFD700;
-}
-
-/* 快速篩選標籤 */
-.quick-filters {
+/* 活躍篩選提示 */
+.active-filters {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--gray-6);
+    gap: 8px;
+    margin-bottom: 16px;
+    padding: 12px;
+    background: rgba(105, 57, 23, 0.05);
+    border-radius: 8px;
 }
 
 .filter-tag {
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
-    background: var(--gray-7);
-    color: var(--gray-3);
-    cursor: pointer;
-    transition: all 0.3s ease;
+    padding: 4px 12px;
+    border-radius: 16px;
+    background: white;
+    color: var(--primary-brown);
     font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid var(--primary-brown);
 }
 
-.filter-tag:hover,
-.filter-tag.active {
-    background: var(--primary);
-    color: white;
-}
-
-/* 載入更多按鈕 */
-.load-more {
-    display: block;
-    width: 200px;
-    margin: 3rem auto;
-    padding: 1rem;
-    text-align: center;
-    background: var(--white);
-    border: 2px solid var(--primary);
-    color: var(--primary);
-    border-radius: var(--border-radius-md);
+.filter-tag .remove {
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.load-more:hover {
-    background: var(--primary);
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primary-brown);
     color: white;
+    font-size: 0.8rem;
 }
 
-/* 響應式設計 */
-@media (max-width: 768px) {
-    .camping-banner {
-        height: 300px;
-    }
-    
-    .banner-content h1 {
-        font-size: 2rem;
-    }
-    
-    .filter-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .camping-spots {
-        grid-template-columns: 1fr;
-    }
+/* 價格範���滑塊美化 */
+.price-range input[type="range"] {
+    width: 100%;
+    height: 4px;
+    background: var(--gray-6);
+    border-radius: 2px;
+    appearance: none;
 }
 
-/* 動畫效果 */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.price-range input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-brown);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.spot-card {
-    animation: fadeIn 0.5s ease forwards;
+/* 地區選擇樣式 */
+.custom-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid var(--gray-6);
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,...");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
 }
 
-/* 懸浮提示 */
-.tooltip {
+/* 日期選擇樣式 */
+.date-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.date-group {
     position: relative;
 }
 
-.tooltip:hover::before {
-    content: attr(data-tooltip);
+.date-group i {
     position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.5rem 1rem;
-    background: rgba(0,0,0,0.8);
-    color: white;
-    border-radius: var(--border-radius-sm);
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-
-/* Flatpickr 客製化樣式 */
-.flatpickr-calendar {
-    background: var(--white);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    border-radius: var(--border-radius-lg);
-    border: none;
-    padding: 1rem;
-}
-
-.flatpickr-day {
-    border-radius: var(--border-radius-md);
-    transition: all 0.3s ease;
-}
-
-.flatpickr-day.selected {
-    background: var(--primary);
-    border-color: var(--primary);
-}
-
-.flatpickr-day.selected:hover {
-    background: var(--secondary-1);
-    border-color: var(--secondary-1);
-}
-
-.flatpickr-day:hover {
-    background: var(--gray-7);
-}
-
-.flatpickr-current-month {
-    font-size: 1.1rem;
-    color: var(--gray-1);
-}
-
-.flatpickr-weekday {
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--gray-4);
 }
 
-.flatpickr-months .flatpickr-prev-month:hover svg,
-.flatpickr-months .flatpickr-next-month:hover svg {
-    fill: var(--primary);
-}
-
-/* 日期輸入框樣式 */
-.spot-date {
-    margin-top: 1rem;
-}
-
-.spot-date label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--gray-3);
-    font-weight: 500;
-}
-
-.spot-date input {
+.date-input {
     width: 100%;
-    padding: 0.8rem 1rem;
+    padding: 10px 10px 10px 35px;
     border: 1px solid var(--gray-6);
-    border-radius: var(--border-radius-md);
-    font-size: var(--font-size-base);
-    color: var(--gray-1);
-    background: var(--white);
+    border-radius: 8px;
+}
+
+.date-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-4);
+    font-size: 0.9rem;
+}
+
+/* 價格範圍樣式 */
+.price-range {
+    padding: 10px 0;
+}
+
+.price-inputs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.price-inputs input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--gray-6);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* 設施網格樣式 */
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.facility-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid var(--gray-6);
+    border-radius: 8px;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.spot-date input:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(105, 57, 23, 0.1);
-    outline: none;
+.facility-item:hover {
+    background: var(--gray-7);
+}
+
+.facility-item i {
+    color: var(--primary-brown);
+}
+
+/* 可折疊區塊樣式 */
+.collapsible .collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.collapsible.active .collapse-content {
+    max-height: 500px;
+}
+
+/* 按鈕樣式 */
+.filter-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-reset, .btn-apply {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-reset {
+    background: var(--gray-7);
+    color: var(--gray-3);
+}
+
+.btn-apply {
+    background: var(--primary-brown);
+    color: white;
+}
+
+.btn-reset:hover {
+    background: var(--gray-6);
+}
+
+.btn-apply:hover {
+    background: var(--secondary-brown);
+}
+
+/* 美化滾動條 */
+.filter-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.filter-sidebar::-webkit-scrollbar-track {
+    background: var(--gray-7);
+}
+
+.filter-sidebar::-webkit-scrollbar-thumb {
+    background: var(--gray-5);
+    border-radius: 3px;
+}
+
+/* 篩選區塊內容緊湊化 */
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h3 {
+    color: var(--primary-brown);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--gray-6);
+}
+
+/* 卡片動畫 */
+.camping-card {
+    transition: transform 0.2s;
+}
+
+.camping-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 營區卡片樣式優化 */
+.camp-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.camp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+}
+
+/* 圖片區域 */
+.camp-image {
+    position: relative;
+    padding-top: 66%;
+    overflow: hidden;
+}
+
+.camp-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.camp-card:hover .camp-image img {
+    transform: scale(1.05);
+}
+
+/* 徽章樣式 */
+.camp-badges {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.badge.hot {
+    background: rgba(255, 59, 48, 0.9);
+    color: white;
+}
+
+.badge.new {
+    background: rgba(52, 199, 89, 0.9);
+    color: white;
+}
+
+.badge.discount {
+    background: rgba(255, 149, 0, 0.9);
+    color: white;
+}
+
+/* 收藏按鈕 */
+.btn-favorite {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-favorite:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+/* 內容區域 */
+.camp-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.camp-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--gray-4);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.camp-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--gray-1);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+/* 評分區域 */
+.camp-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.stars {
+    color: var(--status-warning);
+}
+
+.rating-score {
+    font-weight: 600;
+    color: var(--gray-1);
+}
+
+.review-count {
+    color: var(--gray-4);
+    font-size: 0.9rem;
+}
+
+/* 標籤樣式 */
+.camp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tag {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tag.activity {
+    background: rgba(105, 57, 23, 0.1);
+    color: var(--primary-brown);
+}
+
+.tag.feature {
+    background: rgba(155, 122, 90, 0.1);
+    color: var(--secondary-brown);
+}
+
+/* 設施圖標 */
+.camp-facilities {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.facility {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--gray-7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-3);
+}
+
+/* 底部價格和按鈕 */
+.camp-meta {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--gray-6);
+}
+
+.camp-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.original-price {
+    color: var(--gray-4);
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+
+.current-price {
+    color: var(--primary-brown);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.current-price strong {
+    font-size: 1.4rem;
+}
+
+.btn-book {
+    padding: 8px 16px;
+    border-radius: 25px;
+    background: var(--primary-brown);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-book:hover {
+    background: var(--secondary-brown);
+    transform: translateY(-2px);
+}
+
+/* 響應式設計 */
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .filter-sidebar {
+        width: 100%;
+        position: static;
+        max-height: none;
+    }
+
+    .camping-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+/* 右側內容區包裝器 */
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* 商品列表 */
+.camping-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.camp-image {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.camp-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.camp-content {
+    padding: 15px;
+    height: calc(100% - 180px);
+    display: flex;
+    flex-direction: column;
+}
+
+.camp-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--gray-1);
+}
+
+/* 分頁容器 */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 0 40px;
+    margin-top: auto;
+}
+
+.pagination-btn {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-6);
+    background: white;
+    color: var(--gray-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.pagination-btn:hover {
+    border-color: var(--primary-brown);
+    color: var(--primary-brown);
+    background: rgba(105, 57, 23, 0.05);
+}
+
+.pagination-btn.active {
+    background: var(--primary-brown);
+    color: white;
+    border-color: var(--primary-brown);
+    font-weight: 500;
+}
+
+/* 上一頁/下一頁按鈕 */
+.pagination-btn i {
+    font-size: 0.85rem;
+}
+
+/* 響應式設計 */
+@media (max-width: 1200px) {
+    .camping-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .camping-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .pagination-container {
+        padding: 20px 0;
+    }
+    
+    .pagination-btn {
+        min-width: 36px;
+        height: 36px;
+    }
 }
